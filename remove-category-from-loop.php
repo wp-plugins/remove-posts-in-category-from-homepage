@@ -4,7 +4,7 @@ Plugin Name: Remove Posts in Category From Homepage
 Plugin URI: http://davidwalsh.name/category-loop
 Description: Allows the blogger to prevent posts within a given category from displaying in the main loop
 Author: David Walsh
-Version: 1.0
+Version: 1.01
 Author URI: http://davidwalsh.name
 */
 ?><?php 
@@ -28,8 +28,10 @@ Author URI: http://davidwalsh.name
 	<tr class="form-field">
 		<th scope="row" valign="top"><label for="removeMainLoop"><?php _e($RCFH_LOOP_LABEL); ?></label></th>
 		<td>
-			<input type="checkbox" name="remove-loop" id="removeMainLoop"<?php echo $checked ? ' checked="checked"' : ''; ?> value="1" /><br />
-			<span class="description"><?php _e($RCFH_LOOP_DESCRIPTION); ?></span>
+			<label for="removeMainLoop">
+				&nbsp;&nbsp;<input type="checkbox" name="remove-loop" id="removeMainLoop"<?php echo $checked ? ' checked="checked"' : ''; ?> value="1" style="width:auto;" />
+				<span class="description"><?php _e($RCFH_LOOP_DESCRIPTION); ?></span>
+			</label>
 		</td>
 	</tr>
 <?php } 
@@ -40,9 +42,13 @@ Author URI: http://davidwalsh.name
 		global $RCFH_LOOP_LABEL, $RCFH_LOOP_DESCRIPTION;
 ?>
 	<div class="form-field">
-		<label for="removeMainLoop"><?php _e($RCFH_LOOP_LABEL); ?></label>
-		<input type="checkbox" name="remove-loop" id="removeMainLoop" value="1" />
-		<p><?php _e($RCFH_LOOP_DESCRIPTION); ?></p>
+		<label for="removeMainLoop">
+			<?php _e($RCFH_LOOP_LABEL); ?><br />
+		<p>
+			<input type="checkbox" name="remove-loop" id="removeMainLoop" value="1" style="width:auto;" />
+			<span style="display: inline-block;"><?php _e($RCFH_LOOP_DESCRIPTION); ?></span>
+		</p>
+		</label>
 	</div>
 <?php }
 
