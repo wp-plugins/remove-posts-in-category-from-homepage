@@ -4,7 +4,7 @@ Plugin Name: Remove Posts in Category From Homepage
 Plugin URI: http://davidwalsh.name/category-loop
 Description: Allows the blogger to prevent posts within a given category from displaying in the main loop
 Author: David Walsh
-Version: 1.01
+Version: 1.02
 Author URI: http://davidwalsh.name
 */
 ?><?php 
@@ -86,6 +86,9 @@ Author URI: http://davidwalsh.name
 		// Only remove categories if it's the main query/homepage
 		if($query->is_home() && $query->is_main_query()) {
 			$value = get_option($RCFH_LOOP_OPTION_KEY);
+			if(!is_array($value)) {
+				$value = array();
+			}
 
 			// Modify query to remove posts which shouldn't be shown
 			if(count($value)) {

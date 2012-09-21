@@ -3,7 +3,7 @@ Contributors: davidwalsh83
 Tags: categories, posts
 Requires at least: 3.0.1
 Tested up to: 3.4.2
-Stable tag: 1.01
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ The option key is `remove-loop-cats`;  all categories marked not to display in t
 1. The checkbox appears on the "Add New Category" and "Edit Category" forms.
 
 == Changelog ==
+
+= 1.02 =
+* Additional logical check at time of install to ensure an array is present
 
 = 1.01 =
 * Improved layout of both the "Add Category" and "Edit Category" screens
