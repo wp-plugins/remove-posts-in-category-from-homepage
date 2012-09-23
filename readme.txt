@@ -3,17 +3,17 @@ Contributors: davidwalsh83
 Tags: categories, posts
 Requires at least: 3.0.1
 Tested up to: 3.4.2
-Stable tag: 1.02
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows WordPres admins to prevent posts in a given category from dislaying on the homepage / main loop.
+This plugin allows WordPres admins to prevent posts in a given category from displaying on the homepage / main loop as well as the RSS feed.
 
 == Description ==
 
-This plugin allows WordPres admins to prevent posts in a given category from dislaying on the homepage / main loop.
+This plugin allows WordPres admins to prevent posts in a given category from displaying on the homepage / main loop as well as the RSS feed.
 
-A new checkbox will display on the "Add New Category" and "Edit Category" screens -- it's that simple!
+Two new checkbox will display on the "Add New Category" and "Edit Category" screens -- it's that simple!
 
 == Installation ==
 
@@ -26,17 +26,20 @@ Installation is easy:
 
 = Will posts in given categories still display within the RSS feed? =
 
-Yes, posts in marked categories will still display in the RSS feed in their normal position.
+A new option has been added to additionally remove posts in a category from the main RSS feed
 
-= What is this plugin's option key? =
+= What are the plugin's option keys? =
 
-The option key is `remove-loop-cats`;  all categories marked not to display in the main loop are stored in this option to keep the DB footprint as low as possible.
+The option keys are `remove-loop-cats` and `remove-loop-rss`;  all categories marked not to display in the main loop are stored in this option to keep the DB footprint as low as possible.
 
 == Screenshots ==
 
 1. The checkbox appears on the "Add New Category" and "Edit Category" forms.
 
 == Changelog ==
+
+= 1.1 =
+* Added feature which allows posts from being remove from the RSS feed
 
 = 1.02 =
 * Additional logical check at time of install to ensure an array is present
